@@ -10,6 +10,7 @@ import { count } from 'rxjs';
 })
 export class HomePageComponent implements OnInit{
   counter: number = 1;
+  signUpKey: boolean = false;
   ngOnInit(): void {
   }
   counterIncrement(count: any) {
@@ -28,5 +29,11 @@ export class HomePageComponent implements OnInit{
     } else {
       return 'violet'
     }
+  }
+  signUp(value: string) {
+    if(value==='login')
+      this.signUpKey = false
+    else
+      this.signUpKey = true
   }
 }

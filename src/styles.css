@@ -1,5 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
-body{
+.slider-alignment{
     margin: 0;
     padding: 0;
     height: 100vh;
@@ -208,3 +208,121 @@ body{
     font-weight: bold;
     font-size: 16px;
   }
+
+
+  .container {
+    display: flex;
+    /* float: right; */
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+    width: 100%;
+    background-color: black;
+    height: 50px;
+    border: 1px solid black;
+  }
+  .next-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 10px;
+    width: 100%;
+    /* background-color: grey; */
+    height: 700px;
+    text-align: center;
+  }
+
+  .next-container::before {
+    content: '';
+    position: absolute;
+    width: 98%;
+    height: 700px;
+    padding: 0 10px;
+    background-image: url('../src/assets/img/background_2.gif'); /* Replace with your image URL */
+    background-size: cover;
+    background-position: center;
+    opacity: 0.7; /* Set opacity to 50% for the background image */
+    z-index: -1;
+    background-clip: content-box;
+}
+
+.text {
+    position: relative; /* Make the text position relative to the container */
+    /* z-index: 1; Ensure the text is above the pseudo-element */
+    /* padding: 20px; Example padding */
+}
+
+  .left-span {
+    /* float: left; */
+    color: white;
+    display: flex;
+    align-items: center;
+    
+  }
+  .right-span {
+    /* float: right; */
+    color: white;
+  }
+
+  .right-span span {
+    margin-left: 20px;
+  }
+  .left-span span {
+    margin-right: 15px;
+  }
+
+.icon {
+    font-family: 'Material Icons';
+    font-size: 30px; /* Example size */
+    color: #E8EAED;
+}
+.header-body {
+    margin: 0;
+    padding: 0 10px 0 10px;
+    width: 98%;
+    height: 100%;
+}
+.image-span {
+    font-size: 50px;
+}
+.image-span span {
+    display: block;
+    margin-top: 10px;
+}
+.image-text-span {
+    /* display: block; */
+    font-size: 20px;
+    margin-top: 80px;
+    margin-left: 20px;
+    text-align: center;
+}
+
+.text-button {
+    font-size: 30px;
+}
+.text-button-head {
+    font-size: 25px;
+}
+.text-button-small {
+    font-size: 17px;
+}
+
+.reference-link {
+    text-decoration: none;
+    color: black;
+}
+.reference-link-head {
+    text-decoration: none;
+    color: white;
+    /* font-size: 30px; */
+}
+
+.reference-link:hover, 
+.reference-link:active,
+.reference-link:focus {
+    text-decoration: underline; /* Underline when hovered, clicked, or focused */
+}
+
+.text-button-bottom {
+    vertical-align: 4px;
+}

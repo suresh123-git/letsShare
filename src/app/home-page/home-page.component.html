@@ -6,7 +6,7 @@
     <title>Image Insertion Example</title>
     <link rel="stylesheet" href="../../styles.css">
     </head>
-    <body>
+    <body class="slider-alignment">
         <!-- Image slider start -->
         <div class="slider">
             <div class="slides">
@@ -48,6 +48,7 @@
             </div>
             <!-- manual navigation ends -->
         </div>
+        @if (!signUpKey) {
         <div>
             <h3 [style.color]="changecolor()" class="head">Welcome Back Chef</h3>
             <h1 [style.color]="changecolor()"class="title">Let's Share</h1>
@@ -62,11 +63,35 @@
                 </div>
                 <div class="span-container">
                     <span class="span-text">Don't have account no worries..</span>
-                    <button [style.color]="changecolor()" class="sign-up">Sign Up</button>
+                    <button [style.color]="changecolor()" (click)="signUp('signup')" class="sign-up">Sign Up</button>
                 </div>
                 <!-- <div>Don't have account?</div> -->
             </div>
         </div>
+    }
+    @else {
+        <div>
+            <h3 [style.color]="changecolor()" class="head">Welcome Chef</h3>
+            <h1 [style.color]="changecolor()"class="title">Let's Share</h1>
+            <div class="fixed-box">
+                <label [style.color]="changecolor()" for="username">Chef's Name</label>
+                <input [style.border-color]="changecolor()" type="text" id="username1" name="username" placeholder="Enter your username" autocomplete="true">
+                <label [style.color]="changecolor()" for="mail">Chef's Email</label>
+                <input [style.border-color]="changecolor()" type="text" id="mail1" name="mail" placeholder="Enter your Mail" autocomplete="true">
+                <label [style.color]="changecolor()" for="password">Chef's Password</label>
+                <input [style.border-color]="changecolor()" type="password" id="password" name="password" placeholder="Enter your password">
+                <div class="button-container">
+                    <button [style.border-color]="changecolor()" [style.color]="changecolor()" class="button">SIGN UP</button>
+                    <!-- <button [style.border-color]="changecolor()" [style.color]="changecolor()" class="button">SIGN UP</button> -->
+                </div>
+                <div class="span-container">
+                    <span class="span-text">Wanna go back to login page..</span>
+                    <button [style.color]="changecolor()" (click)="signUp('login')" class="sign-up">login</button>
+                </div>
+                <!-- <div>Don't have account?</div> -->
+            </div>
+        </div>
+    }
         <!-- Image slider End -->
         <script type="text/javascript">
             counter=1
