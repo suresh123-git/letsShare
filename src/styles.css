@@ -1,0 +1,328 @@
+/* You can add global styles to this file, and also import other style files */
+.slider-alignment{
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    background: #ffffff;
+    width: 850;
+    height: 675;
+}
+
+.slider{
+    width: 60%;
+    height: 100%;
+    /* border-radius: 10px; */
+    overflow: hidden;
+}
+
+.slides{
+    width: 500%;
+    height: 100%;
+    display: flex;
+}
+
+.slider input {
+    display: none;
+}
+
+.slide {
+    width: 20%;
+    transition: 2s;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+}
+
+/* css for manual slide navigator */
+
+.navigation-manual {
+    position: absolute;
+    width: 800px;
+    margin-top: -40px;
+    display: flex;
+    justify-content: center;
+}
+
+.manual-btn {
+    border: 2px solid #ffffff;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.manual-btn:not(:last-child) {
+    margin-right: 40px;
+}
+
+.manual-btn:hover {
+    background: #ffffff;
+}
+
+#radio1:checked ~ .first {
+    margin-left: 0;
+}
+
+#radio2:checked ~ .first {
+    margin-left: -20%;
+}
+
+#radio3:checked ~ .first {
+    margin-left: -40%;
+}
+
+#radio4:checked ~ .first {
+    margin-left: -60%;
+}
+
+/* css for automatic navigation */
+
+.navigation-auto {
+    position: absolute;
+    display: flex;
+    width: 800px;
+    justify-content: center;
+    margin-top: 460px;
+}
+
+.navigation-auto div {
+    border: 2px solid #ffffff;
+    padding: 5px;
+    border-radius: 10px;
+    transition: 1s;
+}
+
+.navigation-auto div::not(:last-child){
+    margin-right: 40px;
+}
+
+#radio1:checked ~ .navigation-auto .auto-btn1 {
+    background: #ffffff;
+}
+#radio2:checked ~ .navigation-auto .auto-btn2 {
+    background: #ffffff;
+}
+#radio3:checked ~ .navigation-auto .auto-btn3 {
+    background: #ffffff;
+}
+#radio4:checked ~ .navigation-auto .auto-btn4 {
+    background: #ffffff;
+}
+
+.title {
+    font-size: 80px;
+    font-family: 'Times New Roman', Times, serif;
+    margin-left: 95px;
+}
+.head {
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    margin-left: 400px;
+}
+
+.fixed-box {
+    color: chocolate;
+    width: 400px;
+    height: 400px;
+    border: 0;
+    padding: 10px;
+    margin-left: 95px;
+}
+
+.fixed-box label {
+    font-size: 18px;
+    font-family: 'Times New Roman', Times, serif;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.fixed-box input {
+    width: calc(100% - 20px);
+    padding: 5px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+    height: 40px;
+    border-radius: 5px;
+    border-style: solid;
+}
+
+/* color classes for place holders */
+.placeholder-chocolate::placeholder {
+    color: chocolate;
+}
+.placeholder-greenyellow::placeholder {
+    color: greenyellow;
+}
+.placeholder-violet::placeholder {
+    color: violet;
+}
+.placeholder-green::placeholder {
+    color: green;
+}
+
+.button-container {
+    display: flex;
+
+  }
+  
+  .button {
+    margin-right: 15px; /* Adjust the margin value as needed */
+  padding: 10px 10px; /* Adjust padding to increase button size */
+  font-size: 14px; /* Adjust font size as needed */
+  border: 2px solid #000; /* Add border to buttons */
+  background-color: #fff; /* Set background color of buttons */
+  border-radius: 5px;
+  border-style: solid;
+  cursor: pointer;
+  margin-top: 10px;
+  }
+
+  .button:hover {
+    background-color: #f0f0f0; /* Change background color on hover */
+  }
+
+  .span-container{
+    display: flex;
+  }
+  .span-text {
+    padding: 10px 10px;
+    position: absolute;
+    margin-left: -10px;
+    font-family: 'Times New Roman', Times, serif;
+    color: black;
+  }
+  .sign-up {
+    padding: 10px 3px;
+    margin-left: 205px;
+    margin-top: 1px;
+    border: none;
+    background-color: transparent;
+    font-family: 'Times New Roman', Times, serif;
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+  }
+
+
+  .container {
+    display: flex;
+    /* float: right; */
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+    width: 100%;
+    background-color: black;
+    height: 50px;
+    border: 1px solid black;
+  }
+  .next-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 10px;
+    width: 100%;
+    /* background-color: grey; */
+    height: 700px;
+    text-align: center;
+  }
+
+  .next-container::before {
+    content: '';
+    position: absolute;
+    width: 98%;
+    height: 700px;
+    padding: 0 10px;
+    background-image: url('../src/assets/img/background_2.gif'); /* Replace with your image URL */
+    background-size: cover;
+    background-position: center;
+    opacity: 0.7; /* Set opacity to 50% for the background image */
+    z-index: -1;
+    background-clip: content-box;
+}
+
+.text {
+    position: relative; /* Make the text position relative to the container */
+    /* z-index: 1; Ensure the text is above the pseudo-element */
+    /* padding: 20px; Example padding */
+}
+
+  .left-span {
+    /* float: left; */
+    color: white;
+    display: flex;
+    align-items: center;
+    
+  }
+  .right-span {
+    /* float: right; */
+    color: white;
+  }
+
+  .right-span span {
+    margin-left: 20px;
+  }
+  .left-span span {
+    margin-right: 15px;
+  }
+
+.icon {
+    font-family: 'Material Icons';
+    font-size: 30px; /* Example size */
+    color: #E8EAED;
+}
+.header-body {
+    margin: 0;
+    padding: 0 10px 0 10px;
+    width: 98%;
+    height: 100%;
+}
+.image-span {
+    font-size: 50px;
+}
+.image-span span {
+    display: block;
+    margin-top: 10px;
+}
+.image-text-span {
+    /* display: block; */
+    font-size: 20px;
+    margin-top: 80px;
+    margin-left: 20px;
+    text-align: center;
+}
+
+.text-button {
+    font-size: 30px;
+}
+.text-button-head {
+    font-size: 25px;
+}
+.text-button-small {
+    font-size: 17px;
+}
+
+.reference-link {
+    text-decoration: none;
+    color: black;
+}
+.reference-link-head {
+    text-decoration: none;
+    color: white;
+    /* font-size: 30px; */
+}
+
+.reference-link:hover, 
+.reference-link:active,
+.reference-link:focus {
+    text-decoration: underline; /* Underline when hovered, clicked, or focused */
+}
+
+.text-button-bottom {
+    vertical-align: 4px;
+}
